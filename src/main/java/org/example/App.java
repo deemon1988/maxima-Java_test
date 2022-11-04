@@ -1,79 +1,37 @@
 package org.example;
 
-public class App {
+public class App
+{
+    public static void main( String[] args )
+    {
+        City Spb = new City("Санкт-Петербург", 98, true, true);
+        City Murmansk = new City("Мурманск",1400,true, false);
+        City Tver = new City("Тверь", 540);
+        City Mosсow = new City("Москва", 800, true, true);
 
-    public static void main(String[] args) {
+        Truck trailer_truck = new Truck("Грузовик с полуприцепом", 44000, 90, 50.41 );
+        Ship tanker = new Ship("Танкер",18159000, 27, 300.82);
+        Plane aircraft = new Plane("Самолёт",120000, 800, 600.68);
+        Ship kater = new Ship("Катер",1815, 60, 150.82);
+        // System.out.println(aircraft.getPrice(Tver));
+        // System.out.println(tanker.getPrice(Murmansk));
+        // System.out.println(trailer_truck.getPrice(Mosсow));
 
-        System.out.println(daysCount((byte) 3, 2020));
+       // System.out.println(tanker.equals(kater));
+
+SimpleTransportFactory transportFactory = new SimpleTransportFactory();
+TransportShop transportShop = new TransportShop(transportFactory);
+transportShop.orderTransport(SimpleTransportFactory.TransportType.SHIP);
+        System.out.println(SimpleTransportFactory.TransportType.SHIP);
+
+       TransportFactory zxc = new TransportFactory();
+        System.out.println(zxc.getTransport(Mosсow,1501,1));
+        System.out.println();
+        Logistics asd = new Logistics(tanker, kater, trailer_truck,aircraft);
+        asd.getShipping(Murmansk,1500,3);
+
 
     }
 
-    public static byte daysCount(byte month, int year) {
-        byte result;
-        switch (month) {
-            case 1:
-                result = 31;
-                break;
-            case 2:
-                if (year % 400 == 0 )                                   // год, номер которого кратен 400, — високосный;
-
-                {
-                    result = 29;
-
-                } else {
-                    if (year % 4 == 0 && year % 100 != 0 ) {        // годы, номер которых кратен 4 и не кратен 100  — високосные
-                        result = 29;
-                    } else {
-                        result = 28;                               //иначе если кратен 100 — невисокосные
-                    }
-                }
-
-                break;
-            // Отсюда следует распределение високосных годов:
-            //
-            //год, номер которого кратен 400, — високосный;
-            //остальные годы, номер которых кратен 100, — невисокосные (например, годы 1700, 1800, 1900, 2100, 2200, 2300);
-            //остальные годы, номер которых кратен 4, — високосные[5].
-            //все остальные годы — невисокосные.
-
-            case 3:
-                result = 31;
-                break;
-            case 4:
-                result = 30;
-                break;
-
-            case 5:
-                result = 31;
-                break;
-
-            case 6:
-                result = 30;
-                break;
-            case 7:
-                result = 31;
-                break;
-            case 8:
-                result = 31;
-                break;
-            case 9:
-                result = 30;
-                break;
-            case 10:
-                result = 31;
-                break;
-            case 11:
-                result = 30;
-                break;
-            case 12:
-                result = 31;
-                break;
-
-            default:
-                result = 0;
-                break;
-        }
-        return result;
-    }
 
 }
