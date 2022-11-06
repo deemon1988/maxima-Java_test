@@ -32,3 +32,27 @@ public static int multipleWeight (int a) {
                        }
 
                    }
+
+
+
+
+                    Transport getTransport(City city, int weight, int hours) {
+                           final String SHIP = "Новый Корабль";
+                           final String TRUCK = "Новый Грузовик";
+                           final String PLANE = "Новый Самолёт";
+                           final float SHIP_PRICE = 30.05f;
+                           final float TRUCK_PRICE = 10.03f;
+                           final float PLANE_PRICE = 50.01f;
+                           Transport transport = null;
+                           int speed;
+
+                           speed = city.getDistance() / hours;
+                           System.out.println("скорость "+speed );  // скорость транспорта
+                           if (speed < 40 && city.isOnWater()) transport = new Ship(SHIP, multipleWeight(weight), 30, SHIP_PRICE);
+                           if (speed > 120 && city.isHasAirport()) transport = new Plane(PLANE, multipleWeight(weight), 850, PLANE_PRICE);
+                           if (speed > 40 && speed <120) transport = new Truck(TRUCK, multipleWeight(weight),110, PLANE_PRICE);
+
+
+                           System.out.println(transport.getName()+" - грузоподъёмность "+transport.getCapacity());
+                           return transport;
+                           }

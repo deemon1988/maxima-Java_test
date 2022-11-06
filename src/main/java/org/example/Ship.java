@@ -7,7 +7,6 @@ public class Ship extends Transport {
 
     @Override
  float getPrice(City city) {
-        float stoimost;
         if (city.isOnWater())return (float) (getCostOfKm()* city.getDistance());else return 0;
     }
 

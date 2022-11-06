@@ -13,22 +13,16 @@ public class App
         Ship tanker = new Ship("Танкер",18159000, 27, 300.82);
         Plane aircraft = new Plane("Самолёт",120000, 800, 600.68);
         Ship kater = new Ship("Катер",1815, 60, 150.82);
-        // System.out.println(aircraft.getPrice(Tver));
-        // System.out.println(tanker.getPrice(Murmansk));
-        // System.out.println(trailer_truck.getPrice(Mosсow));
 
-       // System.out.println(tanker.equals(kater));
 
-SimpleTransportFactory transportFactory = new SimpleTransportFactory();
-TransportShop transportShop = new TransportShop(transportFactory);
-transportShop.orderTransport(SimpleTransportFactory.TransportType.SHIP);
-        System.out.println(SimpleTransportFactory.TransportType.SHIP);
+      //  Logistics logistics = new Logistics(aircraft,tanker, kater, trailer_truck,aircraft);
+       // logistics.getShipping(Tver,1500,3);
 
-       TransportFactory zxc = new TransportFactory();
-        System.out.println(zxc.getTransport(Mosсow,1501,1));
-        System.out.println();
-        Logistics asd = new Logistics(tanker, kater, trailer_truck,aircraft);
-        asd.getShipping(Murmansk,1500,3);
+        TransportCreater transportCreater = new TransportFactory();
+        Transport transport = transportCreater.createTransport().getTransport(Mosсow,1700,3);
+        System.out.println(transport instanceof Plane);
+
+
 
 
     }
