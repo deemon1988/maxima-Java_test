@@ -24,6 +24,17 @@ public class App
 
 
 
+        System.out.println();
+        float b = 809.535f;
+        b= Math.round(b);
+        System.out.println(b);
+        System.out.println();
+        if (b%10 ==0) System.out.println(b);
+        else {while (b%10 !=0) {b++;}}
+        System.out.println(Math.round(b));
+
+
+
 
     }
 
