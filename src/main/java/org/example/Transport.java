@@ -1,11 +1,16 @@
 package org.example;
 
-abstract class Transport {
+
+
+import java.util.Arrays;
+
+abstract class Transport implements Repairable{
 
     private  String name;
     private int capacity;
     private int speed;
     private double costOfKm;
+
 
 
     public Transport(String name, int capacity, int speed, double costOfKm) {
@@ -15,7 +20,8 @@ abstract class Transport {
         this.costOfKm = costOfKm;
     }
 
-   abstract float getPrice(City city);
+
+    abstract float getPrice(City city);
 
     public String getName() {
         return name;
@@ -49,13 +55,6 @@ abstract class Transport {
         this.costOfKm = costOfKm;
     }
 
-//public String toString() {
- //       return getName();
-//}
 
-    //public boolean equals(Object obj) {
-      //  Ship otherShip = (Ship)obj;
-      //  return this.name == otherShip.getName();
-   // }
 
 }

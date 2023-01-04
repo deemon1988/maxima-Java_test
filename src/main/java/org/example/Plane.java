@@ -1,6 +1,8 @@
 package org.example;
 
-public class Plane extends Transport{
+public class Plane extends Transport {
+
+
     public Plane(String name, int capacity, int speed, double costOfKm) {
         super(name, capacity, speed, costOfKm);
     }
@@ -12,4 +14,18 @@ public class Plane extends Transport{
     }
 
 
+    @Override
+    public void startRepair() {
+        System.out.println("Самолёт не ремонте");
+    }
+
+    @Override
+    public void finishRepair() {
+        System.out.println("Самолёт доступен");
+    }
+
+    @Override
+    public boolean isRepairing() {
+        return true;
+    }
 }

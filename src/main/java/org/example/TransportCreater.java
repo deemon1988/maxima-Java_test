@@ -1,5 +1,5 @@
 package org.example;
 
 public interface TransportCreater {
-    TransportFactory createTransport ();
+     TransportFactory createTransport();
 }
