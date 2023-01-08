@@ -1,0 +1,8 @@
+чтобы писать кирилицей 
+
+в редакторе
+@PropertySource(value = "classpath:application.properties" , encoding = "UTF-8") 
+
+в файле
+прописать вручную
+Java_Projects\maxima-Java-06\src\main\resources\application.properties

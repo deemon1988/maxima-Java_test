@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.model.Cat;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
