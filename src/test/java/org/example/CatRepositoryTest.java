@@ -12,22 +12,22 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 
-public class CatRepositoryTest
-{
+public class CatRepositoryTest {
     private CatRepository repo;
+
     @Before
-    public void init(){
-    repo=new SimpleCatRepository();
+    public void init() {
+        repo = new SimpleCatRepository();
     }
 
     @Test
-    public void shouldCRUDWorks()
-    {
-        Cat cat1=new Cat(1L,"Мурзик", 10, true);
-        Cat cat2=new Cat(2L,"Рамзес", 2, false);
-        Cat cat3=new Cat(3L,"Барсик", 5, true);
-        Cat cat4=new Cat(4L,"Мурка", 4, false);
-        Cat cat5=new Cat(5L,"Карл", 7, true);
+    public void shouldCRUDWorks() {
+
+        Cat cat1 = new Cat("Мурзик", 5, true, 1L);
+        Cat cat2 = new Cat("Барсик", 6, true, 2L);
+        Cat cat3 = new Cat("Мурка", 8, false, 3L);
+        Cat cat4 = new Cat("Aурка", 8, false, 4L);
+        Cat cat5 = new Cat("Карл", 7, true, 5L);
 
 
         repo.create(cat1);
@@ -41,10 +41,10 @@ public class CatRepositoryTest
         assertEquals(5, allCats.size());   // 5 котов
 
         // тест read()
-       Cat testCat = repo.read(3L);
-       // assertEquals("Барсик", testCat.getName());
-       // assertEquals(5, testCat.getWeight());
-      //  assertTrue(testCat.isAngry());
+        Cat testCat = repo.read(3L);
+        // assertEquals("Барсик", testCat.getName());
+        // assertEquals(5, testCat.getWeight());
+        //  assertTrue(testCat.isAngry());
 /*
         Cat newCat1 = new Cat(5L,"Карл III", 7, false);
         Cat newCat2 = new Cat(2L,"Рамзес", 3, true);
