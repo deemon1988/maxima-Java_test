@@ -2,11 +2,9 @@ package org.example;
 
 import org.example.model.Cat;
 import org.example.repository.CatRepository;
-import org.example.repository.SimpleCatRepository;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;

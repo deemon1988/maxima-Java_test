@@ -1,0 +1,13 @@
+[
+  {"id":1,
+    "name":"J. Smalling",
+    "doctor":{"id":null,
+      "name":"Dr. Who",
+      "speciality":"General Practitioner",
+      "patienList":[]}
+  },
+  {"id":2,
+    "name":"Samantha Williams",
+    "doctor":null
+  }
+]

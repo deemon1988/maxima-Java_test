@@ -1,6 +1,6 @@
 package org.example.model;
 
-import org.example.Cat;
+import org.example.fromthecource.Cat;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;

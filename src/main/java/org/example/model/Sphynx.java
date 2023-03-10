@@ -1,6 +1,6 @@
 package org.example.model;
 
-import org.example.Cat;
+import org.example.fromthecource.Cat;
 
 public class Sphynx implements Cat {
     private String name = "Рамзес";
